@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option go_package = "pkg/os/services";
+
+// The service definition
+service FileService {
+  // RPC method: Takes a FolderRequest and returns a FolderStructure response
+  rpc GetFolderStructure (FolderRequest) returns (FolderStructure);
+}
+
+// Request message containing the folder name/path
+message FolderRequest {
+  string folder_name = 1;
+}
+
+// Response message containing the directory structure as a string
+message FolderStructure {
+  string structure = 1;
+}
