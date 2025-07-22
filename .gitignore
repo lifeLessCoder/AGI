@@ -1,0 +1,6 @@
+# Ignore all .mod and .sum files
+*.mod
+*.sum
+
+# Ignore the exe/ directory
+exe/
